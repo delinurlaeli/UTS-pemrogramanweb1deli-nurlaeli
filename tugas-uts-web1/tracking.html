@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>📚 BukuKita</h2>
+                <small>UTS Pemrograman Web 1</small>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html">🏠 Dashboard</a></li>
+                <li><a href="stok.html">📦 Informasi Stok & Katalog</a></li>
+                <li><a href="checkout.html">🛒 Halaman Pemesanan</a></li>
+                <li class="active"><a href="tracking.html">🚚 Tracking Pengiriman</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <p><strong>Deli Nurlaeli</strong></p>
+                <p>312510061 | I252A</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Tracking Pengiriman Paket</h1>
+                <span>Deli Nurlaeli (312510061)</span>
+            </header>
+
+            <div class="card mb-4">
+                <h2>🔍 Cari Nomor Delivery Order (DO)</h2>
+                <div class="search-box-inline mt-3">
+                    <input type="text" id="doInput" placeholder="Masukkan No. DO (Contoh: DO-99214 atau DO-88421)" class="form-control">
+                    <button id="searchDoBtn" class="btn btn-primary">Cari</button>
+                </div>
+                <small class="text-muted mt-2 d-block">Contoh DO uji coba: <strong>DO-99214</strong>, <strong>DO-88421</strong></small>
+            </div>
+
+            <div class="card" id="trackingResultCard" style="display: none;">
+                <h2>📦 Status & Detail Pengiriman</h2>
+                <div class="tracking-summary mt-3">
+                    <p><strong>Nomor DO:</strong> <span id="resDo"></span></p>
+                    <p><strong>Nama Pemesan:</strong> <span id="resName"></span></p>
+                    <p><strong>Tanggal Kirim:</strong> <span id="resDate"></span></p>
+                    <p><strong>Ekspedisi:</strong> <span id="resCourier"></span></p>
+                    <p><strong>Total Pembayaran:</strong> <span id="resTotal"></span></p>
+                </div>
+
+                <div class="progress-container mt-4">
+                    <h3>Progress Pengiriman</h3>
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-step completed" id="step1">
+                            <div class="step-icon">📦</div>
+                            <span>Diproses</span>
+                        </div>
+                        <div class="progress-step" id="step2">
+                            <div class="step-icon">🚚</div>
+                            <span>Dikirim Kurir</span>
+                        </div>
+                        <div class="progress-step" id="step3">
+                            <div class="step-icon">🏠</div>
+                            <span>Tiba di Tujuan</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

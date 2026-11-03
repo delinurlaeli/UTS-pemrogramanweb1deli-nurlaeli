@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Stok & Katalog - Toko Buku Online</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="app-layout">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h2>📚 BukuKita</h2>
+                <small>UTS Pemrograman Web 1</small>
+            </div>
+            <ul class="sidebar-menu">
+                <li><a href="dashboard.html">🏠 Dashboard</a></li>
+                <li class="active"><a href="stok.html">📦 Informasi Stok & Katalog</a></li>
+                <li><a href="checkout.html">🛒 Halaman Pemesanan</a></li>
+                <li><a href="tracking.html">🚚 Tracking Pengiriman</a></li>
+                <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <p><strong>Deli Nurlaeli</strong></p>
+                <p>312510061 | I252A</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header class="top-header">
+                <h1>Informasi Stok & Katalog Buku</h1>
+                <span>Deli Nurlaeli (312510061)</span>
+            </header>
+
+            <div class="card mb-4">
+                <h2>➕ Tambah Baris Stok Baru (JavaScript DOM)</h2>
+                <form id="addBookForm" class="inline-form mt-3">
+                    <div class="form-group">
+                        <label>Judul Buku</label>
+                        <input type="text" id="newTitle" placeholder="Contoh: Belajar JavaScript" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Penulis</label>
+                        <input type="text" id="newAuthor" placeholder="Contoh: Deli Nurlaeli" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Harga (Rp)</label>
+                        <input type="number" id="newPrice" placeholder="75000" required class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Stok</label>
+                        <input type="number" id="newStock" placeholder="10" required class="form-control">
+                    </div>
+                    <div class="form-group align-end">
+                        <button type="submit" class="btn btn-success">Tambah Stok</button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card">
+                <h2>📋 Daftar Katalog Buku (Array JSON)</h2>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Judul Buku</th>
+                                <th>Penulis</th>
+                                <th>Harga</th>
+                                <th>Stok</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="catalogTableBody">
+                            <!-- Dimuat dinamis oleh script.js -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
